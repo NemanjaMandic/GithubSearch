@@ -1,0 +1,29 @@
+.searchBarWrapper{
+    background: #FFF;
+    width: 70%;
+}
+.form{
+    display: flex;
+}
+.logoWrapper{
+   
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.logoWrapper img{
+    max-width: 100%;
+    height: auto;
+}
+
+.fieldWrapper{
+   width: 100%;     
+}
+
+.inputField{
+    height: 87%;
+    width: 100%;
+    font-size: 1em;
+
+}

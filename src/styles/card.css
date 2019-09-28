@@ -1,0 +1,35 @@
+.cardList{
+    display: grid;
+    grid-gap: 10px;
+    margin: 25px;
+
+}
+
+.card{
+ border: 1px solid black;
+
+}
+
+.card .link{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s ease;
+   
+}
+.card .link:hover{
+    color: #352f2f;
+    text-decoration: underline;
+
+}
+@media (min-width: 350px) {
+    .cardList{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (min-width: 550px) {
+    .cardList{
+        grid-template-columns: auto auto auto;
+    }
+}
