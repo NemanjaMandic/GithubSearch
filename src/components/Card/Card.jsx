@@ -4,8 +4,11 @@ const Card = props => {
     const { avatar, username, fullName, bio, link} = props;
     return (
       <div className="card">
-        <img alt="avatar" style={{ width: '70px' }} src={avatar} />
+       <div className="avatarWrapper">
+       <img alt="avatar" className="img" src={avatar} />
+       </div>
         <div>
+          <h3>{fullName}</h3>
           <a className="link" href={link}><div>{username}</div></a>
           <div>{bio}</div>
         </div>

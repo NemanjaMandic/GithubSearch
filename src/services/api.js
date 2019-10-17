@@ -7,5 +7,5 @@ export const fetchUsers = () => {
 };
 
 export const searchUsers = name => {
-  return get(`${BASE_URL}?q=${name}`);
+  return get(`${BASE_URL}/${name}`);
 };

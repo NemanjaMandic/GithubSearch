@@ -13,10 +13,17 @@ class App extends Component {
   async componentDidMount() {
     const data = await fetchUsers();
 
-    this.setState({ users: data });
+    const users = await data.map(user => {
+      return searchUsers(user.login);
+    });
+
+    const userData = await Promise.all(users);
+
+    this.setState({ users: userData });
   }
   render() {
     const { users } = this.state;
+    console.log("FLUSTER ", users);
     return (
       <div className="App">
         <header className="App-header">
@@ -30,7 +37,8 @@ class App extends Component {
                 avatar={user.avatar_url}
                 username={user.login}
                 link={user.html_url}
-                fullName={user.url}
+                fullName={user.name}
+                bio={user.bio}
               />
             );
           })}
